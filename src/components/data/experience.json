@@ -1,0 +1,29 @@
+[
+
+  {
+    "id": 1,
+    "role": "Software Development Engineer - Intern",
+    "organisation": "Mirosoft",
+    "startDate": "Aug, 2022",
+    "endDate": "Aug, 2023",
+    "location": "London, UK",
+    "experiences": [
+      "Worked on Windows 10 terminal",
+      "Worked on Window 11 Upcoming features"
+    ],
+    "imageSrc": "company/microsoft.png"
+  },
+  {
+    "id": 2,
+    "role": "Website Developer - Intern",
+    "organisation": "SublimeTech",
+    "startDate": "March, 2024",
+    "endDate": "July, 2024",
+    "location": "Navi Mumbai, India",
+    "experiences": [
+      "Worked on Backend database and Connectivity",
+      "Helped to create UI for for website"
+    ],
+    "imageSrc": "company/netflix.png"
+  }
+]
