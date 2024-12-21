@@ -1,0 +1,18 @@
+[
+
+  
+  {
+    "id": 1,
+    "role": "Website Developer - Intern",
+    "organisation": "SublimeTech",
+    "startDate": "March, 2024",
+    "endDate": "sep, 2024",
+    "location": "Navi Mumbai, India",
+    "experiences": [
+      "Worked on Backend database and Connectivity",
+      "Helped to create UI for for website"
+    ],
+    "imageSrc": "company/sublime.png"
+  }
+]
+

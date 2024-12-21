@@ -1,0 +1,16 @@
+[
+
+  
+  {
+    "id": 1,
+    "title": "Graduation",
+    "organisation": "SublimeTech",
+    "nomDate": "March, 2024",
+    "location": "Navi Mumbai, India",
+    "description": [
+      "Worked on Backend database and Connectivity",
+      "Helped to create UI for for website"
+    ],
+    "imageSrc": "company/sublime.png"
+  }
+]
