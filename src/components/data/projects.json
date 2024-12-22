@@ -28,7 +28,7 @@
     "title": "Portfolio",
     "imageSrc": "http://localhost:5173/assets/hero/hero.jpeg",
     "description": "This is a project made with complete React js.",
-    "Websites link": "https://www.example.com",
+    "Websites link": "https://bkbimalportfolio.netlify.app/",
     "source": "https://www.github.com"
   }
 ]
