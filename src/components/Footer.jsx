@@ -1,91 +1,72 @@
-import React from 'react';
-import { Github, Linkedin, Mail, FileText, Twitter, Globe } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="w-full bg-gray-900 text-gray-300">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* About Column */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-white">John Doe</h3>
-            <p className="mb-4">Full-Stack Developer passionate about creating elegant solutions to complex problems with modern technologies.</p>
-            <div className="flex space-x-4">
-              <a href="https://github.com/yourusername" className="hover:text-white transition-colors duration-300">
-                <Github size={20} />
-              </a>
-              <a href="https://linkedin.com/in/yourusername" className="hover:text-white transition-colors duration-300">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://twitter.com/yourusername" className="hover:text-white transition-colors duration-300">
-                <Twitter size={20} />
-              </a>
-              <a href="mailto:your.email@example.com" className="hover:text-white transition-colors duration-300">
-                <Mail size={20} />
-              </a>
-            </div>
-          </div>
-          
-          {/* Quick Links Column */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#home" className="hover:text-white transition-colors duration-300">Home</a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-white transition-colors duration-300">About</a>
-              </li>
-              <li>
-                <a href="#projects" className="hover:text-white transition-colors duration-300">Projects</a>
-              </li>
-              <li>
-                <a href="#skills" className="hover:text-white transition-colors duration-300">Skills</a>
-              </li>
-              <li>
-                <a href="#experience" className="hover:text-white transition-colors duration-300">Experience</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-white transition-colors duration-300">Contact</a>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Contact Column */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-white">Get In Touch</h3>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Mail size={18} />
-                <span>your.email@example.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Globe size={18} />
-                <span>Mumbai, Maharashtra, IN</span>
-              </div>
-              <div className="mt-6">
-                <a 
-                  href="/resume.pdf" 
-                  className="inline-flex items-center px-4 py-2 border border-gray-600 rounded-md hover:bg-gray-800 transition-colors duration-300"
-                >
-                  <FileText size={18} className="mr-2" />
-                  Download Resume
-                </a>
-              </div>
-            </div>
+    <div className="container footer_container" data-aos="fade-up" data-aos-duration="1000">
+      <div className="row py-5">
+        <div className="col-md-4 mb-4">
+          <div className="footer_brand mb-3">bimalbkportfolio</div>
+          <p className="footer_text">Full-Stack Python Developer passionate about creating elegant solutions to complex problems with modern technologies.</p>
+          <div className="social_links d-flex gap-3 mt-3">
+            <a href="https://github.com/yourusername" className="social_item" title="GitHub">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" className="social_item" title="LinkedIn">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/yourusername" className="social_item" title="Twitter">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:your.email@example.com" className="social_item" title="Email">
+              <i className="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
         
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
-          <p>© {currentYear} John Doe. All Rights Reserved.</p>
-          <p className="mt-2 text-gray-500">Built with React & Tailwind CSS</p>
+        <div className="col-md-4 mb-4">
+          <h4 className="footer_heading mb-3">Quick Links</h4>
+          <div className="d-flex flex-column">
+            <Link to="/" className="footer_link mb-2">Home</Link>
+            <Link to="/experience" className="footer_link mb-2">Experience</Link>
+            <Link to="/skills" className="footer_link mb-2">Skills</Link>
+            <Link to="/projects" className="footer_link mb-2">Projects</Link>
+            <Link to="/certificate" className="footer_link mb-2">Certificate</Link>
+            <Link to="/contact" className="footer_link mb-2">Contact</Link>
+          </div>
+        </div>
+        
+        <div className="col-md-4 mb-4">
+          <h4 className="footer_heading mb-3">Get In Touch</h4>
+          <div className="contact_info">
+            <div className="d-flex align-items-center mb-3">
+              <i className="fas fa-envelope me-2"></i>
+              <span>your.email@example.com</span>
+            </div>
+            <div className="d-flex align-items-center mb-3">
+              <i className="fas fa-globe me-2"></i>
+              <span>Mumbai, Maharashtra, IN</span>
+            </div>
+            <a 
+              href="/assets/resume.pdf" 
+              download="Resume.pdf"
+              className="btn btn-outline-warning mt-3"
+            >
+              <i className="fas fa-file-alt me-2"></i>
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
-    </footer>
+      
+      <div className="row py-3 border-top">
+        <div className="col text-center">
+          <p className="mb-0">© {currentYear} Bimal BK. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
   );
 };
 

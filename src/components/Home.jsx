@@ -2,6 +2,11 @@ import React, { useEffect, useRef } from "react";
 import pdf from "../pdf/resume.pdf";
 import hero from "./data/hero.json";
 import Typed from "typed.js";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Certificate from "./Certificate";
+
+import Contact from "./Contact";
 
 const Home = () => {
   const typedRef = useRef(null);
@@ -44,6 +49,11 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Experience />
+      <Projects />
+      <Certificate />
+
+      <Contact />
 
       
     </>
