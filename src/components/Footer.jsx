@@ -1,59 +1,91 @@
 import React from 'react';
-import ShareButton from './ShareButton'; // Assuming ShareButton is a component you have defined
+import { Github, Linkedin, Mail, FileText, Twitter, Globe } from 'lucide-react';
 
-const Footer = ({ currentUrl }) => {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <div>
-      {/* Footer with Copyright centered */}
-      <div
-        className="footer"
-        style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          width: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.2)',
-          padding: '10px 0',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 1000,
-        }}
-      >
-        <span style={{ color: 'white', textAlign: 'center' }}>
-          © 2020 Copyright: 
-          <a
-            className="text-white"
-            href="https://theramsales.netlify.app"
-            style={{ color: 'white', textDecoration: 'none' }}
-          >
-            bimalbkportfolio
-          </a>
-        </span>
+    <footer className="w-full bg-gray-900 text-gray-300">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About Column */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-white">John Doe</h3>
+            <p className="mb-4">Full-Stack Developer passionate about creating elegant solutions to complex problems with modern technologies.</p>
+            <div className="flex space-x-4">
+              <a href="https://github.com/yourusername" className="hover:text-white transition-colors duration-300">
+                <Github size={20} />
+              </a>
+              <a href="https://linkedin.com/in/yourusername" className="hover:text-white transition-colors duration-300">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://twitter.com/yourusername" className="hover:text-white transition-colors duration-300">
+                <Twitter size={20} />
+              </a>
+              <a href="mailto:your.email@example.com" className="hover:text-white transition-colors duration-300">
+                <Mail size={20} />
+              </a>
+            </div>
+          </div>
+          
+          {/* Quick Links Column */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-white">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#home" className="hover:text-white transition-colors duration-300">Home</a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-white transition-colors duration-300">About</a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-white transition-colors duration-300">Projects</a>
+              </li>
+              <li>
+                <a href="#skills" className="hover:text-white transition-colors duration-300">Skills</a>
+              </li>
+              <li>
+                <a href="#experience" className="hover:text-white transition-colors duration-300">Experience</a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-white transition-colors duration-300">Contact</a>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Contact Column */}
+          <div>
+            <h3 className="text-xl font-bold mb-4 text-white">Get In Touch</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Mail size={18} />
+                <span>your.email@example.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Globe size={18} />
+                <span>Mumbai, Maharashtra, IN</span>
+              </div>
+              <div className="mt-6">
+                <a 
+                  href="/resume.pdf" 
+                  className="inline-flex items-center px-4 py-2 border border-gray-600 rounded-md hover:bg-gray-800 transition-colors duration-300"
+                >
+                  <FileText size={18} className="mr-2" />
+                  Download Resume
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
+          <p>© {currentYear} John Doe. All Rights Reserved.</p>
+          <p className="mt-2 text-gray-500">Built with React & Tailwind CSS</p>
+        </div>
       </div>
-
-      {/* Share Button in Left Bottom Corner */}
-      <ShareButton
-        url={currentUrl}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          left: '20px',
-          zIndex: 1001, // Ensure it's above the footer
-        }}
-      />
-
-      {/* Share Button in Right Bottom Corner */}
-      <ShareButton
-        url={currentUrl}
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          zIndex: 1001, // Ensure it's above the footer
-        }}
-      />
-    </div>
+    </footer>
   );
 };
 

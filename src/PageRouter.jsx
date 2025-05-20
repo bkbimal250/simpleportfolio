@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from './components/Contact';
 import Certificate from "./components/Certificate";
+import Footer from "./components/Footer";
 
 
 const PageRouter = () => {
@@ -32,6 +33,7 @@ const PageRouter = () => {
             <Route path="*" element={<div>Sorry, this page does not exist! <a href=""></a> </div>} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );
